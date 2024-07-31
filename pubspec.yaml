@@ -37,6 +37,9 @@ dependencies:
   file_saver:
   path_provider:
   video_player:
+  carousel_slider:
+  provider:
+  shared_preferences:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
