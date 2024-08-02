@@ -4,14 +4,14 @@ import 'package:ahmad/View/login.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-class PageImage extends StatefulWidget {
+class pageImage extends StatefulWidget {
  // const PageImage({Key key}) : super(key: key);
 
   @override
-  State<PageImage> createState() => _PageImageState();
+  State<pageImage> createState() => _pageImageState();
 }
 
-class _PageImageState extends State<PageImage> {
+class _pageImageState extends State<pageImage> {
   final List<String> images = [
     'images/photo_2024-07-29_16-08-27.jpg',
     'images/photo_2024-07-29_16-08-34.jpg',
@@ -97,7 +97,7 @@ class _PageImageState extends State<PageImage> {
       // Navigate to the next page here
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => Login())
+        MaterialPageRoute(builder: (context) => login())
         ,
       );
     }

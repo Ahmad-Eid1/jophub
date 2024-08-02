@@ -1,5 +1,6 @@
 import 'package:ahmad/View/WavePainter.dart';
-import 'package:ahmad/View/about.dart';
+import 'package:ahmad/View/aboutpage.dart';
+import 'package:ahmad/View/editProfile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -95,7 +96,7 @@ class Sitting extends StatelessWidget {
                   title: Text('About'),
                   onTap: () {
                     // الانتقال إلى صفحة About
-                    Get.to(() => AboutPage());
+                    Get.to(() => aboutPage());
                   },
                 ),
                 SizedBox(height: 20),
@@ -103,6 +104,15 @@ class Sitting extends StatelessWidget {
                   leading: Icon(Icons.logout, color: Color.fromARGB(255, 14, 71, 96)),
                   title: Text('Logout'),
                   onTap: _showLanguageDialog,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => editProfile()),
+                    );
+                  },
+                  child: Text('EditProfile'),
                 ),
               ],
             ),

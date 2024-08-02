@@ -1,3 +1,4 @@
+import 'package:ahmad/View/creat_company_profile.dart';
 import 'package:ahmad/View/home_page_company.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -6,7 +7,7 @@ import 'package:get/get.dart';
 
 
 
-class Companysingup extends StatelessWidget {
+class companysingup extends StatelessWidget {
   final TextEditingController companyNameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -44,7 +45,7 @@ class Companysingup extends StatelessWidget {
       );
     } else {
       // تنفيذ عملية الانتقال إلى الصفحة الأخرى
-      Get.to(HomePageCom()); // الانتقال إلى الصفحة الأخرى باستخدام Get.to
+      Get.to(creat_company_profile()); // الانتقال إلى الصفحة الأخرى باستخدام Get.to
     }
   }
 

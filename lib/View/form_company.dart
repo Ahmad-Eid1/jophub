@@ -2,14 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class AddCom extends StatefulWidget {
-  const AddCom() : super();
+class form_company extends StatefulWidget {
+  const form_company() : super();
 
   @override
-  State<AddCom> createState() => _AddState();
+  State<form_company> createState() => _AddState();
 }
 
-class _AddState extends State<AddCom> {
+class _AddState extends State<form_company> {
   GlobalKey<FormState> formState = GlobalKey();
   String _selectedPriceType = 'fix';
   String _hourlyMin = '';

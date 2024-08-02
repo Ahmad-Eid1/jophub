@@ -7,12 +7,12 @@ import 'package:flutter/material.dart';
 
 
 
-class EditCoProfile extends StatefulWidget {
+class editCoProfile extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => _EditCoProfileState();
+  State<StatefulWidget> createState() => _editCoProfileState();
 }
 
-class _EditCoProfileState extends State<EditCoProfile> {
+class _editCoProfileState extends State<editCoProfile> {
   var authenticationController = AuthenticationController.authenticationController;
 
 

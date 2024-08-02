@@ -2,25 +2,26 @@ import 'package:ahmad/View/PostsScreen%20(2).dart';
 import 'package:ahmad/View/Slideshow.dart';
 import 'package:ahmad/View/favorite.dart';
 import 'package:ahmad/View/form_company.dart';
-import 'package:ahmad/View/packages.dart';
+import 'package:ahmad/View/myCoProfile.dart';
+import 'package:ahmad/View/packagesScreen.dart';
 import 'package:ahmad/View/side_menu.dart';
 import 'package:ahmad/View/sitting.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-//import 'package:untitled9/Pages/personal_profile.dart';
+//import 'package:untitled9/Pages/creat_personal_profile.dart';
 
 
 //import 'custom_search.dart'; // تأكد من استيراد ملف البحث هنا
 
-class HomePageCom extends StatefulWidget {
-  const HomePageCom() : super();
+class home_page_company extends StatefulWidget {
+  const home_page_company() : super();
 
   @override
-  State<HomePageCom> createState() => _HomePageState();
+  State<home_page_company> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePageCom> {
+class _HomePageState extends State<home_page_company> {
   int _selectedIndex = 0;
   double _iconElevation = 0.0;
 
@@ -35,7 +36,7 @@ class _HomePageState extends State<HomePageCom> {
             context,
             MaterialPageRoute(
                 builder: (context) =>
-                    favorite())); //   بالصفحة التي ترغب في الانتقال إليها
+                    myCoProfile())); //   بالصفحة التي ترغب في الانتقال إليها
       }
 
       if (index == 1) {
@@ -51,7 +52,7 @@ class _HomePageState extends State<HomePageCom> {
             context,
             MaterialPageRoute(
                 builder: (context) =>
-                    HomePageCom())); //   بالصفحة التي ترغب في الانتقال إليها
+                    home_page_company())); //   بالصفحة التي ترغب في الانتقال إليها
       }
 
       if (index == 3) {
@@ -64,13 +65,13 @@ class _HomePageState extends State<HomePageCom> {
 
       if (index == 4) {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => PurchaseScreen()));
+            context, MaterialPageRoute(builder: (context) => packagesScreen()));
         //   بالصفحة التي ترغب في الانتقال إليها
       }
 
       if (index == 5) {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => AddCom()));
+            context, MaterialPageRoute(builder: (context) => form_company()));
       }
     });
   }

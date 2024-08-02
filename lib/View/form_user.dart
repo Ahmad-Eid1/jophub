@@ -2,14 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Add extends StatefulWidget {
-  const Add() : super();
+class form_user extends StatefulWidget {
+  const form_user() : super();
 
   @override
-  State<Add> createState() => _AddState();
+  State<form_user> createState() => _form_userState();
 }
 
-class _AddState extends State<Add> {
+class _form_userState extends State<form_user> {
   GlobalKey<FormState> formState = GlobalKey();
   String _selectedScope = 'small';
   String _selectedExperienceLevel = 'entry level';

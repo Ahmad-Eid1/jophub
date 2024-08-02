@@ -4,6 +4,8 @@ import 'package:ahmad/View/PostsScreen%20(2).dart';
 import 'package:ahmad/View/Slideshow.dart';
 import 'package:ahmad/View/favorite.dart';
 import 'package:ahmad/View/form_user.dart';
+import 'package:ahmad/View/myProfile.dart';
+import 'package:ahmad/View/creat_personal_profile.dart';
 import 'package:ahmad/View/side_menu.dart';
 import 'package:ahmad/View/sitting.dart';
 import 'package:flutter/cupertino.dart';
@@ -12,14 +14,14 @@ import 'package:flutter/material.dart';
 
 //import 'custom_search.dart'; // تأكد من استيراد ملف البحث هنا
 
-class HomePageusers extends StatefulWidget {
-  const HomePageusers() : super();
+class home_page_users extends StatefulWidget {
+  const home_page_users() : super();
 
   @override
-  State<HomePageusers> createState() => _HomePageusersState();
+  State<home_page_users> createState() => _home_page_usersState();
 }
 
-class _HomePageusersState extends State<HomePageusers> {
+class _home_page_usersState extends State<home_page_users> {
   int _selectedIndex = 0;
   double _iconElevation = 0.0;
 
@@ -30,15 +32,15 @@ class _HomePageusersState extends State<HomePageusers> {
 
       _selectedIndex = index;
       if (index == 0) {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => favorite())); //   بالصفحة التي ترغب في الانتقال إليها
+        Navigator.push(context, MaterialPageRoute(builder: (context) =>myProfile() )); //   بالصفحة التي ترغب في الانتقال إليها
       }
 
       if (index == 1) {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => HomePageusers())); // استبدل  بالصفحة التي ترغب في الانتقال إليها
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Sitting())); // استبدل  بالصفحة التي ترغب في الانتقال إليها
       }
 
       if (index == 2) {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Sitting())); //   بالصفحة التي ترغب في الانتقال إليها
+        Navigator.push(context, MaterialPageRoute(builder: (context) => home_page_users())); //   بالصفحة التي ترغب في الانتقال إليها
       }
 
       if (index == 3) {
@@ -46,7 +48,7 @@ class _HomePageusersState extends State<HomePageusers> {
       }
 
       if (index == 4) {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Add())); //   بالصفحة التي ترغب في الانتقال إليها
+        Navigator.push(context, MaterialPageRoute(builder: (context) => form_user())); //   بالصفحة التي ترغب في الانتقال إليها
       }
     });
   }

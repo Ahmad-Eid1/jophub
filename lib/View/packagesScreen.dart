@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 
 
-class PurchaseScreen extends StatefulWidget {
+class packagesScreen extends StatefulWidget {
   @override
-  _PurchaseScreenState createState() => _PurchaseScreenState();
+  _packagesScreenState createState() => _packagesScreenState();
 }
 
-class _PurchaseScreenState extends State<PurchaseScreen> {
+class _packagesScreenState extends State<packagesScreen> {
   int quantity = 0;
   int selectedPackageId = 0;
   bool isCustomQuantity = false;

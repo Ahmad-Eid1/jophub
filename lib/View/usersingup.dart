@@ -1,4 +1,5 @@
 import 'package:ahmad/View/home_page_user.dart';
+import 'package:ahmad/View/creat_personal_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -41,7 +42,7 @@ class Usersingup extends StatelessWidget {
       );
     } else {
       // تنفيذ عملية الانتقال إلى الصفحة الأخرى
-      Get.to(HomePageusers());
+      Get.to(creat_personal_profile());
     }
   }
 

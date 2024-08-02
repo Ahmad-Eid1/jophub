@@ -7,12 +7,12 @@ import 'dart:io';
 import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
 
-class EditProfile extends StatefulWidget {
+class editProfile extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => _EditProfileState();
+  State<StatefulWidget> createState() => _editProfileState();
 }
 
-class _EditProfileState extends State<EditProfile> {
+class _editProfileState extends State<editProfile> {
   var authenticationController = AuthenticationController.authenticationController;
 
   // بيانات الشركة الافتراضية

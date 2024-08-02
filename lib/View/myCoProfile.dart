@@ -8,12 +8,12 @@ import 'package:flutter/material.dart';
 
 import 'myProfile.dart';
 
-class MyCoProfile extends StatefulWidget {
+class myCoProfile extends StatefulWidget {
   @override
-  _MyCoProfileState createState() => _MyCoProfileState();
+  _myCoProfileState createState() => _myCoProfileState();
 }
 
-class _MyCoProfileState extends State<MyCoProfile> {
+class _myCoProfileState extends State<myCoProfile> {
   final Company company = Company(
     name: 'Soft Life',
     specialization: 'Information technology',

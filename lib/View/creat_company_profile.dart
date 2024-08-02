@@ -2,17 +2,19 @@ import 'dart:io';
 
 import 'package:ahmad/Controller/authenticationController.dart';
 import 'package:ahmad/Model/customFromField.dart';
+import 'package:ahmad/View/home_page_company.dart';
+import 'package:ahmad/View/home_page_user.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
-class company_profile extends StatefulWidget {
+class creat_company_profile extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => _company_profileState();
+  State<StatefulWidget> createState() => _creat_company_profileState();
 }
 
-class _company_profileState extends State<company_profile> {
+class _creat_company_profileState extends State<creat_company_profile> {
   var authenticationController =
       AuthenticationController.authenticationController;
   var nameController = TextEditingController();
@@ -163,6 +165,13 @@ class _company_profileState extends State<company_profile> {
                 child: ElevatedButton(
 
                   onPressed: () {
+
+                    {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => home_page_company()),
+                      );
+                    }
                     print(nameController.text);
                     print(countryController.text);
                     print(specializationController.text);

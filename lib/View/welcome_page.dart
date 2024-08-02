@@ -30,7 +30,7 @@ class _WelcomePageState extends State<WelcomePage> {
   void navigateToImagePage() {
     if (!_isNavigating) { // التحقق من عدم بدء عملية التنقل بالفعل
       _isNavigating = true; // تعيين العلامة للدلالة على بدء التنقل
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => PageImage()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => pageImage()));
     }
   }
 

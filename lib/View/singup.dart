@@ -75,7 +75,7 @@ class singup extends StatelessWidget {
                           child: TabBarView(
                             children: [
                               Usersingup(),
-                              Companysingup(),
+                              companysingup(),
                             ],
                           ),
                         ),

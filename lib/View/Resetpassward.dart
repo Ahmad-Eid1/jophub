@@ -37,7 +37,7 @@ class _ResetScreenState extends State<ResetScreen> {
           content: Text('Password reset successful'),
         ),
       );
-      Navigator.push(context, MaterialPageRoute(builder: (context) =>Login() ));
+      Navigator.push(context, MaterialPageRoute(builder: (context) =>login() ));
     }
   }
 

@@ -5,12 +5,12 @@ import 'package:get/get.dart';
 
 
 
-class ForgotPasswordScreen extends StatefulWidget {
+class forgotpassword extends StatefulWidget {
   @override
-  _ForgotPasswordScreenState createState() => _ForgotPasswordScreenState();
+  _forgotpasswordState createState() => _forgotpasswordState();
 }
 
-class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
+class _forgotpasswordState extends State<forgotpassword> {
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
 

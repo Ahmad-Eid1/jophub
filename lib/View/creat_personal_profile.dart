@@ -1,5 +1,6 @@
 import 'package:ahmad/Controller/authenticationController.dart';
 import 'package:ahmad/Model/customFromField.dart';
+import 'package:ahmad/View/home_page_user.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 
@@ -10,12 +11,12 @@ import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
 
 
-class personal_profile extends StatefulWidget {
+class creat_personal_profile extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => _personal_profileState();
+  State<StatefulWidget> createState() => _creat_personal_profileState();
 }
 
-class _personal_profileState extends State<personal_profile> {
+class _creat_personal_profileState extends State<creat_personal_profile> {
   var authenticationController =
       AuthenticationController.authenticationController;
   var nameController = TextEditingController();
@@ -175,25 +176,31 @@ class _personal_profileState extends State<personal_profile> {
                 textInputType: TextInputType.multiline,
                 controller: personalskillsController,
               ),
-              /* ElevatedButton(
-                  onPressed: () async {
-                    final result = await FilePicker.platform.pickFiles(
-                        type: FileType.custom,
-                        allowedExtensions: ["pdf", "docx"]);
-                    if (result == null) return;
-                    //open single file
-                    final file = result.files.first;
-                    // openFile(file);
-                    //  print('Name:${file.name}');
-                    //  print('Bytes:${file.bytes}');
-                    print('Size:${file.size}');
-                    print('Extension:${file.extension}');
-                    print('Path:${file.path}');
-                    final newFile = await saveFilePermanetly(file);
-                    print('From Path:${file.path!}');
-                    print(('To path:${newFile.path}'));
-                  },
-                  child: Text('Upload CV')),*/
+               Row( mainAxisAlignment: MainAxisAlignment.spaceAround,
+                 children: [
+                 ElevatedButton(
+                     onPressed: () async {
+                       final result = await FilePicker.platform.pickFiles(
+                           type: FileType.custom,
+                           allowedExtensions: ["pdf", "docx"]);
+                       if (result == null) return;
+                       //open single file
+                       final file = result.files.first;
+                       // openFile(file);
+                       //  print('Name:${file.name}');
+                       //  print('Bytes:${file.bytes}');
+                       print('Size:${file.size}');
+                       print('Extension:${file.extension}');
+                       print('Path:${file.path}');
+                       final newFile = await saveFilePermanetly(file);
+                       print('From Path:${file.path!}');
+                       print(('To path:${newFile.path}'));
+                     },
+                     child: Text('Upload CV')),
+
+
+               ],)
+               ,
               SizedBox(height: 20,),
               Container(
                 width:double.infinity,
@@ -202,6 +209,12 @@ class _personal_profileState extends State<personal_profile> {
                 child: ElevatedButton(
 
                   onPressed: () {
+                    {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => home_page_users()),
+                      );
+                    }
                     print(nameController.text);
                     print(countryController.text);
                     print(jopTitleController.text);
@@ -217,7 +230,8 @@ class _personal_profileState extends State<personal_profile> {
                       color: Color(0xff033043),
                     ),),
                 ),
-              )
+              ),
+
             ],
           ),
         ),
@@ -225,7 +239,8 @@ class _personal_profileState extends State<personal_profile> {
     );
   }
 }
-/* void openFile(PlatformFile file) {
+//زر يروح على الهوم بيج يوزر
+ void openFile(PlatformFile file) {
     OpenFile.open(file.path!);
   }
 
@@ -233,4 +248,4 @@ class _personal_profileState extends State<personal_profile> {
     final appStorage = await getApplicationDocumentsDirectory();
     final newFile = File('${appStorage.path}/${file.name}');
     return File(file.path!).copy(newFile.path);
-  }*/
+  }

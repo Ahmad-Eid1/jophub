@@ -1,9 +1,10 @@
 import 'package:ahmad/View/forgotpassword.dart';
+import 'package:ahmad/View/home_page_user.dart';
 import 'package:ahmad/View/singup.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Login extends StatelessWidget {
+class login extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
@@ -27,7 +28,7 @@ class Login extends StatelessWidget {
       // الانتقال إلى الصفحة التالية إذا كانت القيم المدخلة صحيحة
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => HomePage()),
+        MaterialPageRoute(builder: (context) => home_page_users()),
       );
     }
   }
@@ -131,7 +132,7 @@ class Login extends StatelessWidget {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => ForgotPasswordScreen()),
+                              MaterialPageRoute(builder: (context) => forgotpassword()),
                             );
                           },
                           child: Container(
